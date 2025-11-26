@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+:root {
+  --pressed-state: #404bbf;
+  --cloud: #f4f4fd;
+}
+
 h1,h2,h3,h4,h5,h6, p {
     margin-top: 0;
 	margin-bottom: 0;
@@ -806,12 +811,13 @@ margin-bottom: 16px;
 .checked-icon {
     fill: #fff
 }
-.privacy-field:checked + .custom-checked {
-    background-color: #404bbf;
+.privacy-field:checked + .form-label .custom-checked {
+    background-color: var(--pressed-state);
     border: none;
+    fill: var(--cloud);
 }
-.privacy-field:checked + .custom-checked .checked-icon {
-    fill: #F4F4FD;
+.privacy-field:checked + .form-label .custom-checked .checked-icon {
+    fill: var(--cloud);
 }
 .send-button {
     background-color: #4D5AE5;
